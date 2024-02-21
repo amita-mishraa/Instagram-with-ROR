@@ -1,0 +1,15 @@
+<%= flash[:error] %>
+
+<div style="background-color:pink;">
+<h1>Login In</h1>
+
+ <%= form_with model: @user,url: sessions_path do |f| %>
+  
+  <%= f.label :email %><br>
+      <%= f.text_field :email, placeholder: 'Please enter email id' %><br><br>
+  <%= f.label :password %><br>
+      <%= f.password_field :password, placeholder: 'Please enter password' %><br><br>
+  <%= f.submit 'Login In' %>
+
+ <% end %>
+</div>

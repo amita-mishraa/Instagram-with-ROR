@@ -1,0 +1,18 @@
+<center><h1>User Profile</h1>
+
+<p>
+   <Strong>NAME :- </Strong>
+   <%= @profile.Name %><br><br>
+    <Strong>USER_NAME :- </Strong>
+   <%= @profile.User_name %><br><br>
+    <Strong>BIO :- </Strong>
+   <%= @profile.Bio %><br><br>
+    <Strong>GENDER :- </Strong>
+   <%= @profile.Gender %><br><br>
+   <Strong>DOB :- </Strong>
+   <%= @profile.DOB %><br><br>
+</p></center>
+<%= link_to 'Back', homes_path %><br><br>
+<%= link_to 'Edit', edit_user_profile_path(session[:user_id],@profile.id) %><br><br>
+<%= link_to 'LogOut', root_path %><br><br>
+<%= button_to 'Delete Account', user_profile_path(session[:user_id],@profile.id), method: :delete%>

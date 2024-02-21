@@ -1,0 +1,34 @@
+
+
+
+<%=form_with  model: @profile, url: new_user_profile_path(params[:id]) do |i| %>
+  <p>
+    <%= i.label :NAME %><br>
+    <%= i.text_area :Name %>
+  </p>
+
+  <p>
+    <%= i.label :USER_NAME %><br>
+    <%= i.text_area :User_name %>
+  </p>
+ 
+  <p>
+    <%= i.label :BIO %><br>
+    <%= i.text_area :Bio %>
+  </p>
+
+   <p>
+    <%= i.label :GENDER %><br>
+    <%= i.text_area :Gender %>
+   </p>
+
+  <p>
+    <%= i.label :DOB %><br>
+    <%= i.text_area :DOB %>
+  </p>
+
+  <p>
+    <%= i.submit  %>
+  </p>
+
+<% end %>

@@ -1,0 +1,29 @@
+ <h1> Sign Up </h1>
+
+  <% if @user.errors.any?%>
+
+         <% @user.errors.full_messages.each do |message| %>
+
+           <%= message %>
+
+         <% end %>
+
+  <% end %>
+  
+  <div style="background-color:pink;">
+  <%= form_with model: @user do |form| %>
+     
+      <%= form.label :email, "Email" %><br>
+      <%= form.text_field :email, placeholder: "Enter your email address" %><br><br><br>
+    
+      <%= form.label :password, "Password" %><br>
+      <%= form.password_field :password,  class: "form-control", placeholder: "Enter your password" %><br><br><br>
+
+      <%= form.label :password_confirmation, "Confirm password" %><br>
+      <%= form.password_field :password_confirmation, placeholder: "Please enter the password again" %><br><br><br>
+
+  
+      <%= form.submit "Sign Up" %>
+    
+  <% end %>
+</div>
